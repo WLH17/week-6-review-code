@@ -1,3 +1,4 @@
+//This controller handles all the authentication endpoints. For a more in depth overview of what these functions are doing, open the node-four-lecture-code repository and take a look at the comments.
 const bcrypt = require('bcryptjs');
 
 module.exports = {

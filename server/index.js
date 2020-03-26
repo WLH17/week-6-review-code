@@ -10,6 +10,7 @@ const express = require('express'),
 
 app.use(express.json());
 
+//This code allow the server to create and work with user sessions. Reference the Node-four-lecture-code repository for an in depth explanation.
 app.use(session({
     resave: false,
     saveUnitialized: true,

@@ -1,3 +1,4 @@
+--This query will add a user, recieving needed information from the handler function for register found in authController.js
 insert into users (
     email,
     password,

@@ -1,5 +1,6 @@
 import React from 'react';
 
+//PostDisplay handles the displaying of Post data for both Dashboard.js and Profile.js
 const PostDisplay = props => {
     console.log(props)
     return (

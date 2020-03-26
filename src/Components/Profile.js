@@ -12,6 +12,7 @@ class Profile extends Component {
     }
 
     componentDidMount(){
+        //This request will grab ONLY the users posts, instead of all posts found in the database. This is done in a join statement found in get_user_posts.sql
         axios.get(`/api/user-posts/${this.props.user.user_id}`)
         .then(res => {
             this.setState({
@@ -21,6 +22,7 @@ class Profile extends Component {
     }
 
     render(){
+        //Here we map over the user posts and pass them to PostDisplay to display them.
         const mappedPosts = this.state.userPosts.map((post, i) => (
             <PostDisplay key={i} post={post}/>
         ))
@@ -33,6 +35,7 @@ class Profile extends Component {
     }
 }
 
+//Here we are subcribing to reduxState
 const mapStateToProps = reduxState => reduxState;
 
 export default connect(mapStateToProps)(Profile);
